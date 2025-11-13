@@ -29,20 +29,26 @@ get getmiembros(){
 }
 
 
-agregarMiembro(personaje) {
-        if (personaje instanceof Personaje2) {
-            this.#miembros.push(personaje);
-        } else {
-             console.log("Solo se pueden agregar objetos Personaje.");
-        }
+agregarMiembros(miembros){
+    if (miembros instanceof Personaje){
+        this.#miembros.push(miembros);
+        console.log(miembros.getNombre + ' ha sido añadido a la casa ' +this.#nombre )
+    } else{
+        console.log('Esta casa no reside ningun miembro');
+    }
 }
 
 listarMiembros(){
-    console.log('Miembros de la casa ' +this.#nombre);
-    this.#miembros.forEach((miembro)=>{
-        console.log('- ' +miembro.nombre)
-    });
-
+    console.log('Miembros de la' +this.#nombre);
+    if (this.#miembros.length > 0){
+        for (let mismMiembros of this.#miembros){
+            console.log('- ' +mismMiembros.getNombre);
+        }
+    } else {
+        console.log('No hay miembro en esta casa');
     }
 }
+
+}
+
 
