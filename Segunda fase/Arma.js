@@ -32,8 +32,9 @@ get getTipo(){
 }
 
 descripcion(){
-    return this.#nombre + ' (' +this.#tipo + ') - daño: ' +this.#dano;
+    console.log(this.#nombre + ' ( ' +this.#tipo + ') - daño: ' +this.#dano);
 }
     
+
 
 }
