@@ -1,49 +1,38 @@
-import { Personaje2 } from "./Personajes especiales/personaje2.js";
-import { Rey } from "./Personajes especiales/Rey.js";
-import { Consejero } from "./Personajes especiales/Consejero.js";
-import { Guerrero } from "./Personajes especiales/Guerrero.js";
-import { Arma } from "./Arma.js";
+import { Consejero } from "./Personajes Especiales/Consejero.js";
+import { Guerrero } from "./Personajes Especiales/Guerrero.js";
+import { Rey } from "./Personajes Especiales/Rey.js";
+import { Personaje } from "./Personaje.js";
 import { Casa } from "./Casa.js";
-    
+import { Arma } from "./Arma.js";
 
-const Jon= new Personaje2 ('Jon Snow', 20, 'Stak');
-const Trin= new Personaje2 ('Tyrion Listener', 22, 'Listener');
-const Robert= new Personaje2 ('Robert Baratherton', 25, 'Listener');
-
-const miRey= new Rey ('Robert Baratheon', 15);
-
-const miCons1= new Consejero ('Tyrion Listener');
-
-const miGuerrero= new Guerrero ('Jon Snow', '', 'Garra', 25);
+const pers1= new Personaje ('Jon Snow');
+const pers2= new Personaje ('Tyrion Lannister');
+const pers3= new Personaje ('Robert Baratheon');
 
 
-const miArma1= new Arma ();
+const casa1= new Casa ('Casa Stark');
+const casa2= new Casa ('Casa Lannister');
 
-const Stak= new Casa (); 
-const Lannister= new Casa();
+const guerr1= new Guerrero ('Jon Snow', 'Garra', 25);
+
+const consej1= new Consejero ('Tyrion Lannister');
+
+const arma1= new Arma ('Garra', '', 25);
+
+const rey1= new Rey ('Robert Baratheon', 15 );
 
 
+pers1.mensajePresentacion(casa1)
+guerr1.lucharGuerrero(arma1);
 
-// Presentacion 1
-Jon.agregarCasa(Stak);
-Jon.mensajePresent();
+guerr1.entrenar();
 
-// Guerrero
+pers2.mensajePresentacion(casa2);
 
-miGuerrero.luchar();
-miGuerrero.entrenar();
+consej1.lucharConsej();
+consej1.aconsejar();
 
- // Presentacion 2
+pers3.mensajePresentacion(casa1);
 
-Trin.agregarCasa(Lannister);
-Trin.mensajePresent();
-
-// Consejero
-miCons1.lucharConsej();
-miCons1.aconsejar();
-
-// Presentacion 3
-Robert.agregarCasa(Lannister);
-Robert.mensajePresent();
-miRey.gobernar();
-miRey.liderar();
+rey1.gobernar();
+rey1.luchar();
