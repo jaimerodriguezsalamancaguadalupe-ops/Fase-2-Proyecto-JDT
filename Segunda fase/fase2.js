@@ -1,7 +1,7 @@
-import { Consejero } from "./Personajes Especiales/Consejero.js";
-import { Guerrero } from "./Personajes Especiales/Guerrero.js";
-import { Rey } from "./Personajes Especiales/Rey.js";
-import { Personaje } from "./Personaje.js";
+import { Consejero } from "./Personajes especiales/Consejero.js";
+import { Guerrero } from "./Personajes especiales/Guerrero.js";
+import { Rey } from "./Personajes especiales/Rey.js";
+import { Personaje } from "./Personajes especiales/personaje2.js";
 import { Casa } from "./Casa.js";
 import { Arma } from "./Arma.js";
 
@@ -36,3 +36,4 @@ pers3.mensajePresentacion(casa1);
 
 rey1.gobernar();
 rey1.luchar();
+
